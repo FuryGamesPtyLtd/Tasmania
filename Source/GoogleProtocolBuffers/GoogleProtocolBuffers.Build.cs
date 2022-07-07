@@ -14,10 +14,9 @@ public class GoogleProtocolBuffers : ModuleRules
         if (Target.Platform == UnrealTargetPlatform.Win64) {
             PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, "lib", "Win64", "libprotobuf.lib"));
         } else if (Target.Platform == UnrealTargetPlatform.Linux) {
-            PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, "lib", "Linux", "libprotobuf.a")); }
-	else {
+            PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, "lib", "Linux", "libprotobuf.a"));
+	} else {
           throw new Exception("Not yet implemented " + Target.Platform.ToString());
         }
     }
 }
-
